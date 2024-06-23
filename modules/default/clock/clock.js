@@ -22,7 +22,7 @@ Module.register("clock", {
 		showTime: true,
 		showWeek: false,
 		dateFormat: "dddd, LL",
-		sendNotifications: false,
+		sendNotifications: true,
 
 		/* specific to the analog clock */
 		analogSize: "200px",
@@ -90,9 +90,17 @@ Module.register("clock", {
 		// reducedSeconds, so it will trigger when the minute changes
 		setTimeout(notificationTimer, delayCalculator(this.second));
 
+
+        /*setTimeout(() => {
+            this.sendNotification("CURRENT_PROFILE", "Razvan");
+        }, 10000);*/
+
 		// Set locale.
 		moment.locale(config.language);
 	},
+
+
+	
 	// Override dom generator.
 	getDom () {
 		const wrapper = document.createElement("div");
@@ -307,4 +315,6 @@ Module.register("clock", {
 		// Return the wrapper to the dom.
 		return wrapper;
 	}
+
+	
 });

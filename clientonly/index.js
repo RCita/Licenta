@@ -74,6 +74,8 @@
 		process.exit(code);
 	}
 
+	
+
 	getServerAddress();
 
 	(config.address && config.port) || fail();

@@ -11,6 +11,8 @@ Module.register("newsfeed", {
 			{
 				title: "New York Times",
 				url: "https://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml",
+				//url: "https://www.digi24.ro/rss",
+				//url: "https://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml",
 				encoding: "UTF-8" //ISO-8859-1
 			}
 		],
